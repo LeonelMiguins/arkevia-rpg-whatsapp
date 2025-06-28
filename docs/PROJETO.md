@@ -34,6 +34,8 @@ Arkevia-rpg-whatsapp/
 ├── tests/                       ← Pasta de testes
 |   └── localTest.js             ← Simula um bot localmente pra testes
 └── seed/                        ← Scripts para popular banco com dados iniciais  
+    ├── data/                    ← Dados estáticos
+    |   └── habilidades/         ← Cada classe tem suas habilidades aqui, fácil de manter e importar
     ├── classesSeed.js           ← Seed para popular classes e habilidades  
     └── seed.js                  ← Script principal que chama os seeds  
 
