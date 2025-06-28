@@ -17,18 +17,18 @@
  */
 
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 const seedDir = './seed';
 
 function runSeed(file) {
   console.log(`🌱 Rodando seed: ${file}`);
-  execSync(`node --experimental-specifier-resolution=node ${path.join(seedDir, file)}`, { stdio: 'inherit' });
+  execSync(`node ${path.join(seedDir, file)}`, { stdio: 'inherit' });
 }
 
-async function main() {
+function main() {
   const files = fs.readdirSync(seedDir).filter(f => f.endsWith('.js') && f !== 'seed.js');
 
   for (const file of files) {
