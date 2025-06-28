@@ -3,34 +3,36 @@
 
 ```
 Arkevia-rpg-whatsapp/
-├── README.md                       ← Documentação geral do projeto  
-├── database/                       ← Banco de dados e configurações Prisma  
-│   ├── client.js                  ← Cliente Prisma para consultas  
-│   └── prisma/                    ← Configurações do Prisma  
-│       ├── migrations/           ← Migrations do banco de dados  
-│       └── schema.prisma          ← Schema Prisma (modelos e datasource)  
-├── docs/                         ← Documentação detalhada do projeto  
+├── README.md                    ← Documentação geral do projeto  
+├── database/                    ← Banco de dados e configurações Prisma  
+│   ├── client.js                ← Cliente Prisma para consultas  
+│   └── prisma/                  ← Configurações do Prisma  
+│       ├── migrations/          ← Migrations do banco de dados  
+│       └── schema.prisma        ← Schema Prisma (modelos e datasource)  
+├── docs/                        ← Documentação detalhada do projeto  
 │   ├── JOGO.md                  ← Regras e mecânicas do jogo  
 │   ├── PERSONAGEM.md            ← Detalhes sobre personagens e classes  
 │   └── PROJETO.md               ← Planejamento e notas técnicas 
-│   └── CHANGELOG.md               ← Anotações de alterações com datas
-├── game/                         ← Lógica principal do jogo  
+│   └── CHANGELOG.md             ← Anotações de alterações com datas
+├── game/                        ← Lógica principal do jogo  
 │   ├── arkevia-rpg.js           ← Arquivo principal da lógica do jogo  
-│   ├── commands/                 ← Comandos do jogo (interações dos jogadores)  
-│   │   ├── admin/                ← Comandos administrativos  
-│   │   ├── auth/                 ← Comandos de autenticação/login  
-│   │   └── jogador/              ← Comandos do jogador  
+│   ├── commands/                ← Comandos do jogo (interações dos jogadores)  
+│   │   ├── admin/               ← Comandos administrativos  
+│   │   ├── auth/                ← Comandos de autenticação/login  
+│   │   └── jogador/             ← Comandos do jogador  
 │   ├── config/                  ← Configurações específicas do jogo  
 │   ├── functions/               ← Funções auxiliares da lógica do jogo  
 │   ├── handlers/                ← Handlers de eventos e entradas  
 │   │   └── onMessage.js         ← Manipulador principal de mensagens  
 │   ├── services/                ← Serviços e regras de negócio  
 │   └── sessions/                ← Gerenciamento de sessões dos jogadores  
-├── htm/                          ← Arquivos estáticos/front-end (HTML, CSS, JS)  
+├── htm/                         ← Arquivos estáticos/front-end (HTML, CSS, JS)  
 ├── package-lock.json            ← Lock das versões das dependências  
 ├── package.json                 ← Configuração do Node.js e dependências  
-├── scripts/                      ← Scripts auxiliares para o projeto  
+├── scripts/                     ← Scripts auxiliares para o projeto  
 │   └── prisma-tools.js          ← Scripts específicos para Prisma  
+├── tests/                       ← Pasta de testes
+|   └── localTest.js             ← Simula um bot localmente pra testes
 └── seed/                        ← Scripts para popular banco com dados iniciais  
     ├── classesSeed.js           ← Seed para popular classes e habilidades  
     └── seed.js                  ← Script principal que chama os seeds  

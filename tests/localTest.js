@@ -1,3 +1,31 @@
+/**
+ * ================================================================
+ * 🎮 Simulador de Bot Local (modo terminal) para testes no Arkevia
+ * ================================================================
+ * 
+ * Este script permite testar os comandos do bot localmente via terminal,
+ * sem precisar escanear QR Code do WhatsApp ou subir o backend.
+ * 
+ * 🧪 Ideal para:
+ * - Testar comandos rapidamente com diferentes usuários fake
+ * - Debugar a lógica do `onMessage.js` no ambiente local
+ * - Simular interação como se fosse no WhatsApp
+ * 
+ * 👤 Exemplo:
+ * >> /login user 123456
+ * >> /user 5511999998888@c.us
+ * >> /status
+ * 
+ * 💻 Como rodar:
+ * 3. No terminal, rode:
+ *    node caminho/para/este/script.js
+ * 
+ * ⚠️ Importante:
+ * - O `onMessage` deve aceitar objetos com `.body` e `.reply()`
+ * - O sistema pode ser expandido pra simular grupos, botões, etc.
+ */
+
+
 import readline from 'readline';
 import onMessage from '../game/handlers/onMessage.js'; // seu handler real
 
