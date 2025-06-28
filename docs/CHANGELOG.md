@@ -1,4 +1,22 @@
 
+
+## 28/06/25 17:40 pm - mk/refactor/habilidades-itens-estrutura
+
+- Padronizei todos os arquivos em `/seed/data/habilidades/` para usar `module.exports = {…}` no final de cada arquivo (padrão CommonJS)
+- Atualizei todos os arquivos em `/seed/data/habilidades/` para usar só `const` além de `export const` (padrão CommonJS)
+- Padronizei todas as `const` para usar `camel_case` (ex: `habilidades_guerreiro`)
+- Nova pasta `itens` em `seed/data`
+- Todos os arquivos `.js` na pasta `itens` ja segue o padrão acima com `const`, `module.exports` e `camel_case`
+- Novo `Model` no arquivo `schema.prisma` para cobrir os `itens`
+- Novo arquivo na pasta `seed/` chamado de `itensSeed.js` para popular o banco com os `itens`
+- Nova pasta `utils/` em `seed/` 
+- Novo arquivo `loadAllItens.js` em `/seed/utils/`, esse arquivo é responsável por fazer o load de todos os `itens` em `itensSeed.js` para evitar encher `itensSeed.js` de imports e também evitar fazer uma `Array` enorme
+- Movi o arquivo `seed.js` para a pasta `seed/utils/` para manter a organização
+- Atualizei o `package.json` para usar o novo caminho do `seed.js`
+- Atualizei o script `prisma-tools.js` para usar `require` seguindo o padrão do `CommonJS`
+- Atualizei a tree no documento `PROJETO.md`
+- Atualizei o documento `JOGO.md` para listar os itens disponíveis
+
 ## 28/06/25 02:00 am - Leonel Miguins - Criação da base do jogo
 
 * Criação da base do jogo ``game/arkevia-rpg.js``
