@@ -1,0 +1,29 @@
+{
+  "name": "arkevia-rpg",
+  "version": "1.0.0",
+  "description": "Jogo RPG via WhatsApp",
+  "main": "game/arkevia-rpg.js",
+  "type": "module",
+  "scripts": {
+    "game": "node game/arkevia-rpg.js",
+    "seed": "node seed/seed.js",
+    "prisma-tools": "node scripts/prisma-tools.js"
+  },
+  "keywords": [
+    "game",
+    "rpg",
+    "whatsapp",
+    "prisma",
+    "postgres"
+  ],
+  "author": "arkevia-team",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "prisma": "^6.10.1"
+  },
+  "prisma": {
+    "schema": "database/prisma/schema.prisma",
+    "seed": "node seed/seed.js"
+  }
+}
