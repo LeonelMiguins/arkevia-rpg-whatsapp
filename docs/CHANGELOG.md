@@ -1,4 +1,5 @@
-## 28/06/25 - Leonel Miguins - Criação da base do jogo
+
+## 28/06/25 02:00 am - Leonel Miguins - Criação da base do jogo
 
 * Criação da base do jogo ``game/arkevia-rpg.js``
 * Remoção "type": "module" do ``package.json``. Eu converti em CommonJS ``handlers/onMessage.js``, utilizando `require()` para importar módulos e `__dirname` para resolver caminhos de arquivos.
@@ -6,20 +7,17 @@
 * Adicionado a pasta ``/auth`` no arquivo ``.gitignore``.
 * Atualização da tree do projeto no documento PROJETO.md
 
-### Dependêcias Atualizadas:
+> _28/06/25 09:30 am - commit do mk na branch `leo`, `Criação da base do jogo`_
 
-```json
-  "dependencies": {
-    "@prisma/client": "^6.10.1",
-    "@whiskeysockets/baileys": "^6.7.18",
-    "pino": "^9.7.0",
-    "prisma": "^6.10.1",
-    "qrcode-terminal": "^0.12.0"
-  },
-  ```
+- Nova dependencia instalada "dotenv": "^17.0.0" para carregar o .env já que estamos usando CommonJS
+- Seeds agora usam require, seguindo o padrão do CommonJS
+- Nova pasta tests na raiz com o arquivo localTest.js para fazer testes sem ter que rodar o bot
+- Atualizei a tree do projeto no PROJETO.md
+- Comentei o arquivo localTest.js com explicações, tudo bonitinho
 
+---
 
-## 27/06/25 - mk/feat/estrutura-inicial-banco-de-dados
+## 27/06/25 22:40 pm - mk/feat/estrutura-inicial-banco-de-dados
 
 * Organização de algumas pastas pra servir o banco
 * Modelos no Prisma pra Jogador, Classes e Habilidades, tudo amarradinho e pronto pra usar.
