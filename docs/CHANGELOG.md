@@ -1,3 +1,12 @@
+## 28/06/25 12:50 pm - mk/refactor/modularizar-seeds
+
+- Organização dos dados: Separei as habilidades em arquivos individuais dentro da pasta `seed/data/habilidades/` pra deixar o projeto mais modular e fácil de manter.
+
+- Import/export ajeitado: Padronizei os imports dos arquivos `localTest.js`, `classesSeed.js` usando `require` (CommonJS) para evitar conflitos de módulo e problemas com ESModules, já que o projeto não está usando "type": "module".
+
+- Comentários e estrutura: Atualizei os arquivos `PROJETO.md` e `CHANGELOG.md`
+
+---
 
 ## 28/06/25 02:00 am - Leonel Miguins - Criação da base do jogo
 
@@ -10,7 +19,7 @@
 > _28/06/25 09:30 am - commit do mk na branch `leo`, `Criação da base do jogo`_
 
 - Nova dependencia instalada "dotenv": "^17.0.0" para carregar o .env já que estamos usando CommonJS
-- Seeds agora usam require, seguindo o padrão do CommonJS
+- O arquivo `seed.js` agora usa require, seguindo o padrão do CommonJS
 - Nova pasta tests na raiz com o arquivo localTest.js para fazer testes sem ter que rodar o bot
 - Atualizei a tree do projeto no PROJETO.md
 - Comentei o arquivo localTest.js com explicações, tudo bonitinho
