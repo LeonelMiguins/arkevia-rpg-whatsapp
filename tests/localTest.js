@@ -26,8 +26,8 @@
  */
 
 
-import readline from 'readline';
-import onMessage from '../game/handlers/onMessage.js'; // seu handler real
+const readline = require('readline');
+const onMessage = require('../game/handlers/onMessage.js');
 
 // Classe mock da mensagem, pra deixar o reply certinho
 class MockMessage {
@@ -59,7 +59,7 @@ const rl = readline.createInterface({
   prompt: '>> '
 });
 
-console.log('Bot local iniciado. Digite comandos tipo !login nome senha');
+console.log('Bot local iniciado. Digite comandos tipo /login nome senha');
 console.log('Para testar como outro usuário, digite: /user <whatsappId>');
 console.log('Usuários disponíveis:', Object.keys(usuarios).join(', '));
 
