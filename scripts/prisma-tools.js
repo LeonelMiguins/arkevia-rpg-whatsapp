@@ -1,6 +1,6 @@
-import readline from 'readline';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+const readline = require('readline');
+const { exec } = require('child_process');
+const { promisify } = require('util');
 
 const run = promisify(exec);
 
@@ -21,34 +21,62 @@ const menu = `
 
 Digite o número da opção: `;
 
-rl.question(menu, async (res) => {
+rl.question(menu, (res) => {
   switch (res.trim()) {
     case '1':
       rl.question('Digite o nome da migration: ', async (nome) => {
         console.log(`🚀 Criando migration "${nome}"...`);
-        await run(`npx prisma migrate dev --name ${nome}`);
+        try {
+          await run(`npx prisma migrate dev --name ${nome}`);
+        } catch (e) {
+          console.error('Erro na migration:', e);
+        }
         rl.close();
       });
       break;
     case '2':
-      console.log('⚠️ Resetando banco...');
-      await run(`npx prisma migrate reset --force`);
-      rl.close();
+      (async () => {
+        console.log('⚠️ Resetando banco...');
+        try {
+          await run(`npx prisma migrate reset --force`);
+        } catch (e) {
+          console.error('Erro ao resetar banco:', e);
+        }
+        rl.close();
+      })();
       break;
     case '3':
-      console.log('🌱 Rodando seed...');
-      await run(`npm run seed`);
-      rl.close();
+      (async () => {
+        console.log('🌱 Rodando seed...');
+        try {
+          await run(`npm run seed`);
+        } catch (e) {
+          console.error('Erro ao rodar seed:', e);
+        }
+        rl.close();
+      })();
       break;
     case '4':
-      console.log('⚙️ Gerando Prisma Client...');
-      await run(`npm run generate`);
-      rl.close();
+      (async () => {
+        console.log('⚙️ Gerando Prisma Client...');
+        try {
+          await run(`npm run generate`);
+        } catch (e) {
+          console.error('Erro ao gerar Prisma Client:', e);
+        }
+        rl.close();
+      })();
       break;
     case '5':
-      console.log('🔍 Abrindo Prisma Studio...');
-      await run(`npm run studio`);
-      rl.close();
+      (async () => {
+        console.log('🔍 Abrindo Prisma Studio...');
+        try {
+          await run(`npm run studio`);
+        } catch (e) {
+          console.error('Erro ao abrir Prisma Studio:', e);
+        }
+        rl.close();
+      })();
       break;
     case '0':
       console.log('👋 Saindo...');

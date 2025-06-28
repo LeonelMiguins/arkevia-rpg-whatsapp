@@ -21,7 +21,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const seedDir = './seed';
+const seedDir = path.join(__dirname, '..'); // volta pra pasta seed/
 
 function runSeed(file) {
   console.log(`🌱 Rodando seed: ${file}`);

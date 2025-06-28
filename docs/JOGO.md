@@ -233,5 +233,45 @@ Silenciado	Não pode usar habilidades.	2 turnos
 
 Cegueira	50% de chance de errar o ataque.	2 turnos
 
+# Itens do jogo
+
+```bash
+
+# seed/data/itens/globais/
+pergaminho_tp.js    <- pergaminho que da TP pelo mapa
+pote_mana.js        <- pote de mana
+pote_vida.js		<- pode de vida
+
+# seed/data/itens/guerreiro/
+...
+
+# seed/data/itens/mago/
+...
+
+# seed/data/itens/arqueiro/
+...
+
+# seed/data/itens/cavaleiro/
+...
+
+# seed/data/itens/druida/
+...
+
+# seed/data/itens/elementista/
+...
+
+# seed/data/itens/ladino/
+...
+
+# seed/data/itens/monge/
+...
+
+# seed/data/itens/necromante/
+...
+
+# seed/data/itens/paladino/
+...
+
+```
 
 

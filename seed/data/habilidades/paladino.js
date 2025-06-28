@@ -1,6 +1,6 @@
 
 
-export const habilidadesPaladino = [
+const habilidades_paladino = [
   {
     id: 'golpe_sagrado',
     nome: 'Golpe Sagrado',
@@ -37,3 +37,5 @@ export const habilidadesPaladino = [
     custoEnergia: 20,
   },
 ];
+
+module.exports = { habilidades_paladino };

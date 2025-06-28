@@ -36,6 +36,8 @@ Arkevia-rpg-whatsapp/
 └── seed/                        ← Scripts para popular banco com dados iniciais  
     ├── data/                    ← Dados estáticos
     |   └── habilidades/         ← Cada classe tem suas habilidades aqui, fácil de manter e importar
+    |   └── itens/               ← Todos os itens do game
+    ├── utils/                   ← Utilitarios das seeds
     ├── classesSeed.js           ← Seed para popular classes e habilidades  
     └── seed.js                  ← Script principal que chama os seeds  
 

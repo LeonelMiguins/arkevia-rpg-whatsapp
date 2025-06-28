@@ -61,3 +61,18 @@ model Habilidades {
   classeId     String
   classe       Classes  @relation(fields: [classeId], references: [id])
 }
+
+model Item {
+  @@map("item")
+
+  id         String   @id           // 'pote_vida', 'elmo_sagrado', etc
+  nome       String
+  tipo       String                 // 'elmo', 'consumivel', etc
+  descricao  String
+  raridade   String
+
+  atributos  Json?                  // Ex: { hp: 25, def: 12, hpRecuperado: 50 }
+  efeitos    Json?                  // Ex: { passivo: 'Reduz em 10% o dano mágico' }
+
+  criadoEm   DateTime @default(now())
+}

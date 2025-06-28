@@ -1,6 +1,6 @@
 
 
-export const habilidadesArqueiro = [
+const habilidades_arqueiro = [
   {
     id: 'flecha_precisa',
     nome: 'Flecha Precisa',
@@ -37,3 +37,5 @@ export const habilidadesArqueiro = [
     custoEnergia: 20,
   },
 ];
+
+module.exports = { habilidades_arqueiro };

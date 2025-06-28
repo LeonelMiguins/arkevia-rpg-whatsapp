@@ -1,6 +1,6 @@
 
 
-export const habilidadesDruida = [
+const habilidades_druida = [
   {
     id: 'espinhos_terra',
     nome: 'Espinhos da Terra',
@@ -37,3 +37,5 @@ export const habilidadesDruida = [
     custoEnergia: 20,
   },
 ];
+
+module.exports = { habilidades_druida };

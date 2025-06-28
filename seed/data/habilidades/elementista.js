@@ -1,6 +1,6 @@
 
 
-export const habilidadesElementista = [
+const habilidades_elementista = [
   {
     id: 'chama_viva',
     nome: 'Chama Viva',
@@ -37,3 +37,5 @@ export const habilidadesElementista = [
     custoEnergia: 25,
   },
 ];
+
+module.exports = { habilidades_elementista };
