@@ -11,6 +11,9 @@
 #.wwebjs_auth/
 #.wwebjs_cache/
 
+# Pasta Auth do @whiskeysockets/baileys
+auth/
+
 # Git
 #.gitignore
 

@@ -12,7 +12,8 @@ Arkevia-rpg-whatsapp/
 ├── docs/                         ← Documentação detalhada do projeto  
 │   ├── JOGO.md                  ← Regras e mecânicas do jogo  
 │   ├── PERSONAGEM.md            ← Detalhes sobre personagens e classes  
-│   └── PROJETO.md               ← Planejamento e notas técnicas  
+│   └── PROJETO.md               ← Planejamento e notas técnicas 
+│   └── CHANGELOG.md               ← Anotações de alterações com datas
 ├── game/                         ← Lógica principal do jogo  
 │   ├── arkevia-rpg.js           ← Arquivo principal da lógica do jogo  
 │   ├── commands/                 ← Comandos do jogo (interações dos jogadores)  
