@@ -3,34 +3,37 @@
 
 ```
 Arkevia-rpg-whatsapp/
-├── docs/ ← Arquivos .MD com informações
-├── htm/
-│   └── index.html           ← Site do jogo
-│
-│
-├── node_modules/
-├── config/
-│   └── config.js               ← Configurações do bot (nome, prefixo, etc)
-│
-├── sessions/                   ← Armazena a autenticação da sessão do Baileys
-│
-├── commands/
-│   ├── status.js               ← Exibe status do jogador
-│   ├── batalhar.js            ← Simula batalha
-│   ├── inventario.js          ← Mostra inventário
-│   └── ajuda.js               ← Lista de comandos
-│
-├── database/
-│   └── database.db            ← Banco de dados
-│
-├── functions/
-│   ├── commandHandler.js       ← Detecta e executa comandos
-│   ├── playerManager.js        ← Lê, grava e cria jogadores
-│   └── utils.js                ← Funções auxiliares (tempo, random, etc)
-│
-├── server.js                    ← Arquivo principal que inicia o bot
-├── package.json
-└── README.md
+├── README.md                       ← Documentação geral do projeto  
+├── database/                       ← Banco de dados e configurações Prisma  
+│   ├── client.js                  ← Cliente Prisma para consultas  
+│   └── prisma/                    ← Configurações do Prisma  
+│       ├── migrations/           ← Migrations do banco de dados  
+│       └── schema.prisma          ← Schema Prisma (modelos e datasource)  
+├── docs/                         ← Documentação detalhada do projeto  
+│   ├── JOGO.md                  ← Regras e mecânicas do jogo  
+│   ├── PERSONAGEM.md            ← Detalhes sobre personagens e classes  
+│   └── PROJETO.md               ← Planejamento e notas técnicas  
+├── game/                         ← Lógica principal do jogo  
+│   ├── arkevia-rpg.js           ← Arquivo principal da lógica do jogo  
+│   ├── commands/                 ← Comandos do jogo (interações dos jogadores)  
+│   │   ├── admin/                ← Comandos administrativos  
+│   │   ├── auth/                 ← Comandos de autenticação/login  
+│   │   └── jogador/              ← Comandos do jogador  
+│   ├── config/                  ← Configurações específicas do jogo  
+│   ├── functions/               ← Funções auxiliares da lógica do jogo  
+│   ├── handlers/                ← Handlers de eventos e entradas  
+│   │   └── onMessage.js         ← Manipulador principal de mensagens  
+│   ├── services/                ← Serviços e regras de negócio  
+│   └── sessions/                ← Gerenciamento de sessões dos jogadores  
+├── htm/                          ← Arquivos estáticos/front-end (HTML, CSS, JS)  
+├── package-lock.json            ← Lock das versões das dependências  
+├── package.json                 ← Configuração do Node.js e dependências  
+├── scripts/                      ← Scripts auxiliares para o projeto  
+│   └── prisma-tools.js          ← Scripts específicos para Prisma  
+└── seed/                        ← Scripts para popular banco com dados iniciais  
+    ├── classesSeed.js           ← Seed para popular classes e habilidades  
+    └── seed.js                  ← Script principal que chama os seeds  
+
 ```
 
 
