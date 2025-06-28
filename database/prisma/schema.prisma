@@ -14,7 +14,6 @@
 ///
 /// 📁 Normalmente fica na raiz da pasta `prisma/`, ex: `prisma/schema.prisma`
 
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -22,4 +21,43 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+}
+
+model Jogador {
+  @@map("jogador")
+
+  id         String   @id @default(uuid())
+  nome       String
+  numeroWpp  String   @unique
+  email      String?  @unique
+  xp         Int      @default(0)
+  energia    Int      @default(100)
+  hpAtual    Int      @default(100) // Vida atual do jogador
+  hpMaximo   Int      @default(100) // Vida máxima (pode aumentar com nível ou itens)
+  moedas     Int      @default(0)   // Dinheiro in-game 💰
+  classeId   String?
+  classe     Classes? @relation(fields: [classeId], references: [id])
+  criadoEm   DateTime @default(now())
+}
+
+model Classes {
+  @@map("classes")
+
+  id          String        @id // Ex: "guerreiro", "mago"
+  nome        String
+  descricao   String
+  habilidades Habilidades[]
+  jogadores   Jogador[]
+}
+
+model Habilidades {
+  @@map("habilidades")
+
+  id           String   @id // Ex: "golpe_furioso"
+  nome         String
+  descricao    String
+  xpRequerido  Int
+  custoEnergia Int
+  classeId     String
+  classe       Classes  @relation(fields: [classeId], references: [id])
 }

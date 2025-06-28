@@ -25,7 +25,7 @@ const seedDir = './seed';
 
 function runSeed(file) {
   console.log(`🌱 Rodando seed: ${file}`);
-  execSync(`node ${path.join(seedDir, file)}`, { stdio: 'inherit' });
+  execSync(`node --experimental-specifier-resolution=node ${path.join(seedDir, file)}`, { stdio: 'inherit' });
 }
 
 async function main() {
