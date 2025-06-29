@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node game/arkevia-rpg.js",
     "seed": "node seed/utils/seed.js",
-    "prisma-tools": "node scripts/prisma-tools.js"
+    "prisma-tools": "node scripts/prisma-tools.js",
+    "local-bot": "node scripts/local-bot.js"
   },
   "keywords": [
     "game",
