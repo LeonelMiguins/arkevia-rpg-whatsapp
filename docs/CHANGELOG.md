@@ -1,13 +1,22 @@
-## 28/06/25 12:50 pm - mk/refactor/modularizar-seeds
+## 29/06/25 02:23 am - mk/feat/sistemas-jogador-e-mundo
 
-- Organização dos dados: Separei as habilidades em arquivos individuais dentro da pasta `seed/data/habilidades/` pra deixar o projeto mais modular e fácil de manter.
-
-- Import/export ajeitado: Padronizei os imports dos arquivos `localTest.js`, `classesSeed.js` usando `require` (CommonJS) para evitar conflitos de módulo e problemas com ESModules, já que o projeto não está usando "type": "module".
-
-- Comentários e estrutura: Atualizei os arquivos `PROJETO.md` e `CHANGELOG.md`
+- Adicionei `level` ao modelo jogador no `schema.prisma` que será o level/nivel do jogador.
+- Adicionei `sexo` e uma `enum` para `sexo` ao modelo jogador no `schema.prisma` para saber se o player é H/M.
+- Novo modelo `Inventario` no `schema.prisma`.
+- Novo modelo `Guilda` no `schema.prisma`.
+- Novo modelo `Mapa` no `schema.prisma`.
+- Adicionei `localizacaoAtual` no modelo `Jogador` e fiz a relação inversa no modelo `Mapa` no `schema.prisma`.
+- Nova pasta `mapa/` dentro de `seed/data/` e adicionado 3 locais só pra ter uma ideia inicial.
+- Novo arquivo `loadAllMapas.js` em `seed/utils/`.
+- Novo arquivo `mapaSeed.js` em `seed/`.
+- Movi o arquivo `localTest.js` para a pasta `scripts/` e deletei a pasta `tests` para manter a organização.
+- Mudei o nome do arquivo de `localTest.js` para `local-bot.js`.
+- Atualizei a tree no documento `PROJETO.md`.
+- Atualizei o documento `JOGO.md` para listar os mapas.
+- Atualizei o documento `README.md` na raiz do projeto.
+- Fiz testes local com o banco: sem erros nos modelos, tudo migrando certinho e populando o banco devidamente.
 
 ---
-
 
 ## 28/06/25 17:40 pm - mk/refactor/habilidades-itens-estrutura
 
@@ -26,6 +35,18 @@
 - Atualizei a tree no documento `PROJETO.md`
 - Atualizei o documento `JOGO.md` para listar os itens disponíveis
 
+---
+
+## 28/06/25 12:50 pm - mk/refactor/modularizar-seeds
+
+- Organização dos dados: Separei as habilidades em arquivos individuais dentro da pasta `seed/data/habilidades/` pra deixar o projeto mais modular e fácil de manter.
+
+- Import/export ajeitado: Padronizei os imports dos arquivos `localTest.js`, `classesSeed.js` usando `require` (CommonJS) para evitar conflitos de módulo e problemas com ESModules, já que o projeto não está usando "type": "module".
+
+- Comentários e estrutura: Atualizei os arquivos `PROJETO.md` e `CHANGELOG.md`
+
+---
+
 ## 28/06/25 02:00 am - Leonel Miguins - Criação da base do jogo
 
 * Criação da base do jogo ``game/arkevia-rpg.js``
@@ -34,7 +55,7 @@
 * Adicionado a pasta ``/auth`` no arquivo ``.gitignore``.
 * Atualização da tree do projeto no documento PROJETO.md
 
-> _28/06/25 09:30 am - commit do mk na branch `leo`, `Criação da base do jogo`_
+> _28/06/25 09:30 am - commit do mk na branch do `leo`, `Criação da base do jogo`_
 
 - Nova dependencia instalada "dotenv": "^17.0.0" para carregar o .env já que estamos usando CommonJS
 - O arquivo `seed.js` agora usa require, seguindo o padrão do CommonJS

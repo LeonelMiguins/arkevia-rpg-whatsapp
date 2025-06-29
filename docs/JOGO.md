@@ -238,9 +238,9 @@ Cegueira	50% de chance de errar o ataque.	2 turnos
 ```bash
 
 # seed/data/itens/globais/
-pergaminho_tp.js    <- pergaminho que da TP pelo mapa
-pote_mana.js        <- pote de mana
-pote_vida.js		<- pode de vida
+pergaminho_tp.js    ← pergaminho que da TP pelo mapa
+pote_mana.js        ← pote de mana
+pote_vida.js		← pode de vida
 
 # seed/data/itens/guerreiro/
 ...
@@ -271,6 +271,19 @@ pote_vida.js		<- pode de vida
 
 # seed/data/itens/paladino/
 ...
+
+```
+
+---
+
+# Mapas do jogo
+
+```bash
+
+# seed/data/mapa/
+caverna_esquecida.js ← mapa inicial para ter uma ideia
+floresta_sombria.js  ← mapa inicial para ter uma ideia
+vilarejo_inicial.js  ← mapa inicial para ter uma ideia
 
 ```
 

@@ -10,6 +10,7 @@ Arkevia-rpg-whatsapp/
 │       ├── migrations/          ← Migrations do banco de dados  
 │       └── schema.prisma        ← Schema Prisma (modelos e datasource)  
 ├── docs/                        ← Documentação detalhada do projeto  
+|   ├── SETUP.md                 ← Como rodar o projeto
 │   ├── JOGO.md                  ← Regras e mecânicas do jogo  
 │   ├── PERSONAGEM.md            ← Detalhes sobre personagens e classes  
 │   └── PROJETO.md               ← Planejamento e notas técnicas 
@@ -32,11 +33,12 @@ Arkevia-rpg-whatsapp/
 ├── scripts/                     ← Scripts auxiliares para o projeto  
 │   └── prisma-tools.js          ← Scripts específicos para Prisma  
 ├── tests/                       ← Pasta de testes
-|   └── localTest.js             ← Simula um bot localmente pra testes
+|   └── local-bot.js             ← Simula um bot localmente pra testes
 └── seed/                        ← Scripts para popular banco com dados iniciais  
     ├── data/                    ← Dados estáticos
     |   └── habilidades/         ← Cada classe tem suas habilidades aqui, fácil de manter e importar
     |   └── itens/               ← Todos os itens do game
+    |   └── mapa/                ← Todos os mapas do game
     ├── utils/                   ← Utilitarios das seeds
     ├── classesSeed.js           ← Seed para popular classes e habilidades  
     └── seed.js                  ← Script principal que chama os seeds  
