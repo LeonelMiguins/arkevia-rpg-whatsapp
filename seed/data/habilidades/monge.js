@@ -1,6 +1,6 @@
 
 
-export const habilidadesMonge = [
+const habilidades_monge = [
   {
     id: 'soco_duplo',
     nome: 'Soco Duplo',
@@ -37,3 +37,5 @@ export const habilidadesMonge = [
     custoEnergia: 15,
   },
 ];
+
+module.exports = { habilidades_monge };

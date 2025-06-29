@@ -1,14 +1,14 @@
 // import usando require padrão CommonJS
-const { habilidadesGuerreiro } = require('./data/habilidades/guerreiro.js');
-const { habilidadesMago } = require('./data/habilidades/mago.js');
-const { habilidadesArqueiro } = require('./data/habilidades/arqueiro.js');
-const { habilidadesPaladino } = require('./data/habilidades/paladino.js');
-const { habilidadesLadino } = require('./data/habilidades/ladino.js');
-const { habilidadesNecromante } = require('./data/habilidades/necromante.js');
-const { habilidadesMonge } = require('./data/habilidades/monge.js');
-const { habilidadesDruida } = require('./data/habilidades/druida.js');
-const { habilidadesCavaleiro } = require('./data/habilidades/cavaleiro.js');
-const { habilidadesElementista } = require('./data/habilidades/elementista.js');
+const { habilidades_guerreiro } = require('./data/habilidades/guerreiro.js');
+const { habilidades_mago } = require('./data/habilidades/mago.js');
+const { habilidades_arqueiro } = require('./data/habilidades/arqueiro.js');
+const { habilidades_paladino } = require('./data/habilidades/paladino.js');
+const { habilidades_ladino } = require('./data/habilidades/ladino.js');
+const { habilidades_necromante } = require('./data/habilidades/necromante.js');
+const { habilidades_monge } = require('./data/habilidades/monge.js');
+const { habilidades_druida } = require('./data/habilidades/druida.js');
+const { habilidades_cavaleiro } = require('./data/habilidades/cavaleiro.js');
+const { habilidades_elementista } = require('./data/habilidades/elementista.js');
 
 const { PrismaClient } = require('@prisma/client');
 const dotenv = require('dotenv');
@@ -22,62 +22,62 @@ const classes = [
     id: 'guerreiro',
     nome: 'Guerreiro',
     descricao: 'Especialista em combate corpo a corpo com força bruta.',
-    habilidades: habilidadesGuerreiro,
+    habilidades: habilidades_guerreiro,
   },
   {
     id: 'mago',
     nome: 'Mago',
     descricao: 'Manipulador de energias arcanas, especialista em dano mágico.',
-    habilidades: habilidadesMago,
+    habilidades: habilidades_mago,
   },
   {
     id: 'arqueiro',
     nome: 'Arqueiro',
     descricao: 'Especialista em ataques à distância e precisão mortal.',
-    habilidades: habilidadesArqueiro,
+    habilidades: habilidades_arqueiro,
   },
   {
     id: 'paladino',
     nome: 'Paladino',
     descricao: 'Guerreiro sagrado, equilíbrio entre ataque e cura.',
-    habilidades: habilidadesPaladino,
+    habilidades: habilidades_paladino,
   },
   {
     id: 'ladino',
     nome: 'Ladino',
     descricao: 'Mestre da furtividade, velocidade e dano crítico.',
-    habilidades: habilidadesLadino
+    habilidades: habilidades_ladino
   },
   {
     id: 'necromante',
     nome: 'Necromante',
     descricao: 'Controlador de mortos-vivos e magia sombria.',
-    habilidades: habilidadesNecromante,
+    habilidades: habilidades_necromante,
   },
   {
     id: 'monge',
     nome: 'Monge',
     descricao: 'Lutador disciplinado que usa o corpo como arma.',
-    habilidades: habilidadesMonge,
+    habilidades: habilidades_monge,
 
   },
   {
     id: 'druida',
     nome: 'Druida',
     descricao: 'Guardião da natureza, domina magias de cura e veneno.',
-    habilidades: habilidadesDruida,
+    habilidades: habilidades_druida,
   },
   {
     id: 'cavaleiro',
     nome: 'Cavaleiro',
     descricao: 'Protetor com armadura pesada e lealdade inabalável.',
-    habilidades: habilidadesCavaleiro,
+    habilidades: habilidades_cavaleiro,
   },
   {
     id: 'elementalista',
     nome: 'Elementalista',
     descricao: 'Dobrador dos elementos: fogo, gelo, raio e terra.',
-    habilidades: habilidadesElementista
+    habilidades: habilidades_elementista
   },
 ];
 

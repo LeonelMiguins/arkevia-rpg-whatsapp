@@ -1,6 +1,6 @@
 
 
-export const habilidadesNecromante = [
+const habilidades_necromante = [
   {
     id: 'toque_mortal',
     nome: 'Toque Mortal',
@@ -37,3 +37,5 @@ export const habilidadesNecromante = [
     custoEnergia: 20,
   },
 ];
+
+module.exports = { habilidades_necromante };

@@ -1,6 +1,6 @@
 
 
-export const habilidadesGuerreiro = [
+const habilidades_guerreiro = [
   {
     id: 'golpe_furioso',
     nome: 'Golpe Furioso',
@@ -37,3 +37,5 @@ export const habilidadesGuerreiro = [
     custoEnergia: 18,
   },
 ];
+
+module.exports = { habilidades_guerreiro };
