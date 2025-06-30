@@ -46,16 +46,27 @@ function carregarComandos(dir) {
 }
 
 carregarComandos(commandsDir);
-
-async function onMessage(msg) {
+// onMessage agora recebe o parâmetro sock. @IsaStwart
+async function onMessage(msg, sock) {
   const texto = msg.body.trim();
   const [cmd, ...args] = texto.split(' ');
 
   const comando = commands[cmd];
 
-  if (comando) {
-    return comando(msg, args);
-  }
+if (comando) {
+  /* 
+    Aqui temos que passar o 'sock' também para os comandos,
+    porque alguns comandos podem precisar acessar o socket diretamente,
+    por exemplo, para enviar imagens, arquivos ou mensagens formatadas.
+    
+    Por isso, ao invés de apenas:
+      return comando(msg, args);
+    fazemos:
+      return comando(msg, args, sock); @IsaStwart
+  */
+  return comando(msg, args, sock);
+}
+
 
   if (cmd.startsWith('/')) {
     return msg.reply('❓ Comando desconhecido. Use /help');

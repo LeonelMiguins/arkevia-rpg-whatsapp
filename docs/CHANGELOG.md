@@ -1,3 +1,29 @@
+## 30/06/25 02:23 am - isa/criação-de-loja
+
+### Detalhes da criação do comando /Store
+
+* criação dos menus visuais
+* Alterações em ``arkevia-rpg.js`` pois algumas funções irão precisar do socks.
+
+```js
+  // estou passando o sock para onMessage para que comandos possam usar sock.sendMessage() @IsaStwart
+  await onMessage(wrappedMsg, sock);
+```
+e no ``handlers/onMessage.js``
+
+```js
+ return comando(msg, args, sock);
+```
+
+* Criação da pasta ``imgs`` para armazenas todas as imagens usadas no game.
+* Criação da pasta ``store`` em commands para criar todos os scripts nescessários para a função da loja!
+
+---
+
+* Alterações no ``docs/JOGO.md ``na seção ``/store``
+
+
+
 ## 29/06/25 02:23 am - mk/feat/sistemas-jogador-e-mundo
 
 - Adicionei `level` ao modelo jogador no `schema.prisma` que será o level/nivel do jogador.
