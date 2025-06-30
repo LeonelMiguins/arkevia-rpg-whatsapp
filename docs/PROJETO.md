@@ -19,9 +19,12 @@ Arkevia-rpg-whatsapp/
 │   ├── arkevia-rpg.js           ← Arquivo principal da lógica do jogo  
 │   ├── commands/                ← Comandos do jogo (interações dos jogadores)  
 │   │   ├── admin/               ← Comandos administrativos  
+|   |   ├── store/               ← aonde fica todos os comandos da loja do jogo /store
 │   │   ├── auth/                ← Comandos de autenticação/login  
 │   │   └── jogador/             ← Comandos do jogador  
 │   ├── config/                  ← Configurações específicas do jogo  
+|   ├── imgs/                    ← imagens usada no projeto
+|       └── store/               ← imagens da loja /store
 │   ├── functions/               ← Funções auxiliares da lógica do jogo  
 │   ├── handlers/                ← Handlers de eventos e entradas  
 │   │   └── onMessage.js         ← Manipulador principal de mensagens  

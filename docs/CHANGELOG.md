@@ -1,4 +1,4 @@
-## 30/06/25 02:23 am - isa/criação-de-loja
+## 29/06/25 21:10 am - isa/criação-de-loja
 
 ### Detalhes da criação do comando /Store
 
@@ -17,12 +17,13 @@ e no ``handlers/onMessage.js``
 
 * Criação da pasta ``imgs`` para armazenas todas as imagens usadas no game.
 * Criação da pasta ``store`` em commands para criar todos os scripts nescessários para a função da loja!
-
----
-
 * Alterações no ``docs/JOGO.md ``na seção ``/store``
 
+> _29/06/25 21:20 am - commit do mk na branch `isa/criação-de-loja`_
 
+- _Atualizei a tree no documento `PROJETO.md`_
+
+---
 
 ## 29/06/25 02:23 am - mk/feat/sistemas-jogador-e-mundo
 
@@ -81,7 +82,7 @@ e no ``handlers/onMessage.js``
 * Adicionado a pasta ``/auth`` no arquivo ``.gitignore``.
 * Atualização da tree do projeto no documento PROJETO.md
 
-> _28/06/25 09:30 am - commit do mk na branch do `leo`, `Criação da base do jogo`_
+> _28/06/25 09:30 am - commit do mk na branch `leo`, `Criação da base do jogo`_
 
 - Nova dependencia instalada "dotenv": "^17.0.0" para carregar o .env já que estamos usando CommonJS
 - O arquivo `seed.js` agora usa require, seguindo o padrão do CommonJS
