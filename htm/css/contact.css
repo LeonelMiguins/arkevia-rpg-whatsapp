@@ -4,7 +4,7 @@ p{
 }
 
 body{
-    background-color: #171b24;
+    background-color: rgb(23, 27, 36);
     margin: 0;
     padding: 20px;
 }
@@ -29,4 +29,22 @@ h1{
   font-weight: 400;
   font-size: 16px;
   font-style: normal;
+}
+
+.github-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.wpp-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.discord-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
