@@ -25,13 +25,33 @@
  * - O sistema pode ser expandido pra simular grupos, botões, etc.
  */
 
+require('dotenv').config();
 
 const readline = require('readline');
-const onMessage = require('../game/handlers/onMessage.js');
+const onMessage = require('../game/handlers/onMessageHandler.js');
 
-// Classe mock da mensagem, pra deixar o reply certinho
+// Mock do sock (cliente WhatsApp) turbo atualizado pra não travar
+const mockSock = {
+  sendPresenceUpdate: async (status, jid) => {
+    console.log(`[MOCK] sendPresenceUpdate chamado com status='${status}', jid='${jid}'`);
+  },
+  sendMessage: async (jid, content) => {
+    console.log(`[MOCK] sendMessage para ${jid} com conteúdo:`, content);
+  },
+  // adiciona aqui mais mocks se precisar (ex: sendReaction, sendReadReceipt...)
+};
+
+// Classe mock da mensagem, com estrutura que o handler espera
 class MockMessage {
   constructor(body, from) {
+    this.key = {
+      remoteJid: from,
+      fromMe: false,
+      id: 'fake-msg-id-' + Math.random().toString(36).slice(2),
+    };
+    this.message = {
+      conversation: body,
+    };
     this.body = body;
     this.from = from;
   }
@@ -41,16 +61,16 @@ class MockMessage {
   }
 }
 
-// Função que simula o envio da mensagem para o handler onMessage
-async function simulateMessage(text, from) {
+// Função que simula envio da mensagem pro handler, agora com sock
+async function simulateMessage(text, from, sock) {
   const mockMsg = new MockMessage(text, from);
-  await onMessage(mockMsg);
+  await onMessage(mockMsg, sock);
 }
 
 // Usuários fake pra simular troca
 const usuarios = {
   '5511999992222@c.us': 'mk',
-  // adiciona outros usuários fake aqui
+  '5511999991111@c.us': 'dev-mk',
 };
 
 const rl = readline.createInterface({
@@ -63,7 +83,7 @@ console.log('Bot local iniciado. Digite comandos tipo /login nome senha');
 console.log('Para testar como outro usuário, digite: /user <whatsappId>');
 console.log('Usuários disponíveis:', Object.keys(usuarios).join(', '));
 
-let currentUserId = '5511999992222@c.us'; // usuário padrão
+let currentUserId = '5511999992222@c.us';
 
 rl.prompt();
 
@@ -82,8 +102,7 @@ rl.on('line', async (line) => {
     return;
   }
 
-  // Simula envio da mensagem com usuário atual
-  await simulateMessage(line, currentUserId);
+  await simulateMessage(line, currentUserId, mockSock);
 
   rl.prompt();
 }).on('close', () => {

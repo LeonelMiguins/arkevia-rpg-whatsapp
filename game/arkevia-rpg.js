@@ -3,7 +3,7 @@ const P = require('pino');
 const qrcode = require('qrcode-terminal');
 
 // imports
-const onMessage = require('./handlers/onMessage');
+const onMessage = require('./handlers/onMessageHandler');
 
 async function startSock() {
   const { state, saveCreds } = await useMultiFileAuthState('./auth');
@@ -15,7 +15,7 @@ async function startSock() {
 
   sock.ev.on('creds.update', saveCreds);
 
-// integração do onMessage: Prefixo para comandos = /
+// integração do onMessage: Prefixo para comandos = / 
 sock.ev.on('messages.upsert', async ({ messages }) => {
   const msg = messages[0];
   if (!msg.message) return;
@@ -24,6 +24,7 @@ sock.ev.on('messages.upsert', async ({ messages }) => {
   const mensagem = msg.message?.conversation || msg.message?.extendedTextMessage?.text;
   if (!mensagem) return;
 
+  // Cria um wrapper para msg com método reply simplificado @IsaStwart
   const wrappedMsg = {
     body: mensagem,
     reply: async (text) => {
@@ -34,9 +35,9 @@ sock.ev.on('messages.upsert', async ({ messages }) => {
     raw: msg
   };
 
-  await onMessage(wrappedMsg);
+  // estou passando o sock para onMessage para que comandos possam usar sock.sendMessage() @IsaStwart
+  await onMessage(wrappedMsg, sock);
 });
-
 
   
   sock.ev.on('connection.update', (update) => {

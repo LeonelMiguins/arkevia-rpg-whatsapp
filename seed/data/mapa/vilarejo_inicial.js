@@ -11,7 +11,7 @@ const vilarejo_inicial = {
   },
   npcs: ['ferreiro', 'curandeira', 'taverneiro'],
   inimigos: [],
-  coordenada: { x: 1, y: 1 },      // coordenada para ajudar no cálculo de viagens e tempo no /viajar
+  coordenada: { x: 0, y: 0 },      // coordenada para ajudar no cálculo de viagens e tempo no /viajar
   criadoEm: new Date(),           
 };
 

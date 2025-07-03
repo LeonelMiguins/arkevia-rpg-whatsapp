@@ -7,12 +7,11 @@ const pergaminho_tp = {
   descricao: 'Permite teletransportar para a cidade mais próxima.',
   atributos: {},
   efeitos: {
-    teletransporte: true, //Esse teletransporte: true facilita se futuramente quiser diferenciar entre TP de cidade, TP de grupo, TP aleatório
+    teletransporte: true,
     usoUnico: true,
   },
-  raridade: 'raro',
+  raridade: 'raro',  // Raridade do item, isso aqui é importante para drops em dungeons
+  preco: 300,        // Ajusta o valor que quiser, será usado na loja
 };
 
 module.exports = { pergaminho_tp };
-
-

@@ -60,25 +60,49 @@ Ganha 10 XP
 !precisa ter um limite de uso (exemplo, diario)
 
 
-## !store — Loja de itens e poções
+## !store — Loja de itens, armas e poções
 
 🛠️ Exibe itens, armas, disponíveis:
 
 
 ````
+╠══𖠁𖥤 *MERCADO DE ARKEVIA*
 
-🛒 Loja Mística:
+ 👤 Aventureiro: *ISABELLA*            
+ 💰 Ouro: *3750 moedas* 
 
-1. Poção de Vida (+50 HP) - 20 moedas
-2. Poção de Mana (+30 MP) - 15 moedas
-3. Elmo de Ferro - 50 moedas
+╠══𖠁𖥤 *COMANDOS:*    
+                                      
+ ⚔️ */store arma list*
+ ↳ _"Espadas, machados e arcos forjados nas chamas de Eldorath"_
+
+ 🧪 */store porcao list*
+ ↳ _"Poções místicas preparadas pela bruxa do bosque"_
+
+ 🎁 */store item list*
+ ↳  _"Relíquias e bugigangas do mercado negro de Ark’Tar"_
+
+ ↳ 🚪 */store exit*
+ 
+╠══𖠁𖥤
 
 ````
+### Sub-comandos de /store
 
-Use: !comprar <id>
-Ex: !comprar 1
-⚙️ Comando de compra:
-!comprar 1 → checa moedas, adiciona ao inventário
+* /store armas list
+* /store porcoes list
+* /store item list
+* /buy armas ``id``
+* /buy porcao ``id``
+* /buy item ``id``
+* /vender armas ``id``
+* /vender porcoes ``id``
+* /vender item ``id``
+
+### Comandos relacionadas:
+
+* /inventario
+
 
 ## !missões — Lista de missões disponíveis
 

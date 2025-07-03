@@ -9,8 +9,8 @@ const pote_mana = {
   efeitos: {
     recuperarMana: 40,
   },
-  raridade: 'comum',
+  raridade: 'comum',  // Raridade do item, isso aqui é importante para drops em dungeons
+  preco: 100,         // Ajusta o valor que quiser, será usado na loja
 };
 
 module.exports = { pote_mana };
-
